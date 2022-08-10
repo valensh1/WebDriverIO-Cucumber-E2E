@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "esModuleInterop": true, // Need to add this for Chai
+        "moduleResolution": "node",
+        "types": [
+            "node",
+            "webdriverio/async",
+            "@wdio/cucumber-framework",
+            "expect-webdriverio"
+        ],
+        "target": "es2019",
+        "module": "CommonJS"
+    }
+}
