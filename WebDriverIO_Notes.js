@@ -160,3 +160,26 @@ $('div*=Sign in') // Targets the element with a div tag and has partial text ins
 (`//div[contains(.,"text"])`) // Targets the element with a div tag with partial text that contains "text and some other words"
 $(`=webdriverio`) // Targets link that equals webdriverIO; Supported only by WebdriverIO
 $(`*=webdriverio`) // Targets link that contains partial text webdriverIO; Supported only by WebdriverIO
+
+
+//? WebdriverIO METHODS
+await.variableName.setValue(12345) // Clears any input field before typing/setting the value of the input field
+await.variableName.addValue(12345) // DOES NOT CLEAR input field before typing/setting the value of the input field
+await variableName.click(); // Clicks on an element (element is saved into a variableName)
+await variableName.moveTo(); // Moves to an element (element is saved into a variableName)
+await variableName.scrollIntoView(); // Scrolls an element into view (element is saved into a variableName)
+await.variableName.keys(enterValueOrTextHere) // Types into input box like a regular human typing one by one
+await.variableName.debug() // Stops the test so you can inspect the browser
+
+//? MIMICK A HUMAN TYPING INTO AN INPUT FIELD
+const num = 12345;
+const numString = `${num}`; // Convert num variable which is a number into a string
+let element = await $(`input[type=number]`); // Finds the input element with the attribute name type with a value of number
+await element.click(); // Finds element and then clicks on it
+
+for (let i = 0; i < numString.length; i++) {
+  let charStr = numString[i]; // Gets the letter at the specified index position for numString and sets that equal to a variable called charStr
+  await browser.pause(1000);  // Pauses for 1 second
+  await browser.keys(charStr);  // Types in the key which is the the number at the specified index position according to i
+}
+await browser.pause(5000); // Keeps the browser opened/paused for 5 secs
