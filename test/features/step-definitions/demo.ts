@@ -49,8 +49,72 @@ Actions:
   // Mimics a person typing in the numbers 12345 in an input field with a 1 second pause between each keystroke
   for (let i = 0; i < numString.length; i++) {
     let charStr = numString[i]; // Gets the letter at the specified index position
-    await browser.pause(1000);  // Pauses for 1 second
-    await browser.keys(charStr);  // Types in the key which is the the number at the specified index position according to i
+    await browser.pause(1000); // Pauses for 1 second
+    await browser.keys(charStr); // Types in the key which is the the number at the specified index position according to i
   }
   await browser.pause(5000); // Keeps the browser opened/paused for 5 secs
+});
+
+Given(/^A web page is opened drop-down$/, async function () {
+  await browser.url('/dropdown'); // If you just have quotes inside the method it reads the baseURL from our configuration file called wdio.conf.ts file. If you want to go to a specific route on the base URL you just need to put /route. WebdriverIO will automatically pick up the base URL
+  await browser.setTimeout({ implicit: 15000, pageLoad: 10000 }); // Waits 15 seconds before WebDriverIO says I can't find the element; Will wait 10 seconds before it times out and says I couldn't load the page
+  await browser.maximizeWindow();
+});
+
+When(/^Perform web interactions drop-down$/, async function () {
+  //? Drop-down Menus
+  // 1. Assert default option is selected
+  let element = await $('//select/option[@selected="selected"]');
+  let value = await element.getText(); // Gets the text from the DOM element
+  chai.expect(value).to.equal('Please select an option'); // Don't need to await Chai code
+  // await browser.debug();
+
+  // 2. Select by attribute, text, index
+  let dropDownElement = $('#dropdown');
+  // await dropDownElement.selectByVisibleText('Option 2');
+  // await dropDownElement.selectByAttribute('value', '1');
+  await dropDownElement.selectByIndex(2);
+  // await browser.debug();
+
+  // 3. Get a list of options
+  let elementArray = await $$('select > option'); // Using double dollar sign $$ to get an array of elements
+  let arr = [];
+  for (let i = 0; i < elementArray.length; i++) {
+    let element = elementArray[i];
+    let value = await element.getText();
+    arr.push(value);
+    console.log(value);
+  }
+  console.log(`>> Options Array: ${arr}`);
+});
+
+Given(/^A web page is opened checkboxes$/, async function () {
+  await browser.url('/checkboxes'); // If you just have quotes inside the method it reads the baseURL from our configuration file called wdio.conf.ts file. If you want to go to a specific route on the base URL you just need to put /route. WebdriverIO will automatically pick up the base URL
+  await browser.setTimeout({ implicit: 15000, pageLoad: 10000 }); // Waits 15 seconds before WebDriverIO says I can't find the element; Will wait 10 seconds before it times out and says I couldn't load the page
+  await browser.maximizeWindow();
+});
+
+When(/^Perform web interactions checkboxes$/, async function () {
+  //? Checkboxes
+  //! Assert checkbox at index position 1 is NOT checked
+  let checkboxElement = await $('//form[@id="checkboxes"]/input[1]');
+  // await checkboxElement.click();
+  // if(!await checkboxElement.isSelected()) {
+  //   await checkboxElement.click();
+  // }
+  let isChecked = await checkboxElement.isSelected();
+  chai.expect(isChecked).to.be.false;
+  // await browser.debug();
+
+  //! If ALL checkboxes are unselected then check them
+  let checkboxElements = await $$('//form[@id="checkboxes"]/input'); // Creates an array of the checkbox elements
+
+  for (let i = 0; i < checkboxElements.length; i++) {
+    let isCheckedElement = checkboxElements[i]; // Gets checkbox at selected index
+    if (!(await isCheckedElement.isSelected())) {
+      // If checkbox is NOT selected then click checkbox
+      isCheckedElement.click();
+    }
+  }
+  await browser.debug();
 });

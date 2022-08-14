@@ -146,6 +146,10 @@ Reduce test dependencies
 }
  */
 
+//? SELECTING ELEMENTS
+// $ - Selects a single DOM element
+// $$ - Selects multiple DOM elements
+
 //? CSS SELECTORS
 $(`#firstName`) // Targets element with id of firstName
 $(`.loginBtn`)  // Targets element with the class of loginBtn
@@ -161,15 +165,32 @@ $('div*=Sign in') // Targets the element with a div tag and has partial text ins
 $(`=webdriverio`) // Targets link that equals webdriverIO; Supported only by WebdriverIO
 $(`*=webdriverio`) // Targets link that contains partial text webdriverIO; Supported only by WebdriverIO
 
+//? XPATH
+/*
+EXAMPLE HTML
+<form id="checkboxes">
+    <input type="checkbox"> checkbox 1<br>
+    <input type="checkbox" checked=""> checkbox 2
+  </form>
+*/
+
+// XPATH to select first checkbox
+//form[@id='checkboxes']/input[1] // will get the checkbox 1 above
 
 //? WebdriverIO METHODS
-await.variableName.setValue(12345) // Clears any input field before typing/setting the value of the input field
-await.variableName.addValue(12345) // DOES NOT CLEAR input field before typing/setting the value of the input field
+await variableName.setValue(12345) // Clears any input field before typing/setting the value of the input field
+await variableName.addValue(12345) // DOES NOT CLEAR input field before typing/setting the value of the input field
 await variableName.click(); // Clicks on an element (element is saved into a variableName)
 await variableName.moveTo(); // Moves to an element (element is saved into a variableName)
 await variableName.scrollIntoView(); // Scrolls an element into view (element is saved into a variableName)
-await.variableName.keys(enterValueOrTextHere) // Types into input box like a regular human typing one by one
-await.variableName.debug() // Stops the test so you can inspect the browser
+await variableName.keys(enterValueOrTextHere); // Types into input box like a regular human typing one by one
+await variableName.debug(); // Stops the test so you can inspect the browser
+await variableName.getText(); // Gets the text from a DOM element
+await variableName.selectByVisibleText('insert visible text here'); // Selects an element by visible text on screen; Usually used with a drop-down element
+await variableName.selectByAttribute('value', '1'); // Selects the element with the attribute name of value and has a value equal to 1; Usually used for drop-down menus
+await variableName.selectByIndex(2); // Selects an element at the 2nd index position; Usually used with drop-down menus
+await variableName.isSelected(); // Generally use with an IF statement for if element is selected then do this...
+
 
 //? MIMICK A HUMAN TYPING INTO AN INPUT FIELD
 const num = 12345;
@@ -183,3 +204,22 @@ for (let i = 0; i < numString.length; i++) {
   await browser.keys(charStr);  // Types in the key which is the the number at the specified index position according to i
 }
 await browser.pause(5000); // Keeps the browser opened/paused for 5 secs
+
+
+//? LOOPING IN WebdriverIO
+// forEach method does not support async function so must use for of loop or standard for loop instead
+
+  //! Loop through all checkboxes and If checkboxes are unselected then check them
+  let checkboxElements = await $$('//form[@id="checkboxes"]/input'); // Creates an array of the checkbox elements
+
+  for (let i = 0; i < checkboxElements.length; i++) {
+    let isCheckedElement = checkboxElements[i]; // Gets checkbox at selected index
+    if (!(await isCheckedElement.isSelected())) { // If checkbox is NOT selected then click checkbox
+      isCheckedElement.click();
+    }
+  }
+ 
+
+
+//? CHAI ASSERTIONS
+chai.expect(isChecked).to.be.false; // Checks to see if isChecked which is a variable that stores a boolean value is equal to false
