@@ -1,32 +1,33 @@
 Feature: Web Interactions
 
-    @demo
+    # @demo
     Scenario Outline: Demo Web Interactions
         Given A web page is opened
         When Perform web interactions
 
-
-        Examples:
-            | TestID    |
-            | WEB_TC002 |
-
-    @demo
-    Scenario Outline: Demo Web Interactions
+    # @demo
+    Scenario Outline: Demo Drop-downs
         Given A web page is opened drop-down
         When Perform web interactions drop-down
 
-
-        Examples:
-            | TestID    |
-            | WEB_TC003 |
-
-
-    @demo
-    Scenario Outline: Demo Web Interactions
+    # @demo
+    Scenario Outline: Demo Checkboxes
         Given A web page is opened checkboxes
         When Perform web interactions checkboxes
 
+    # @demo
+    Scenario Outline: Demo Windows
+        Given A web page is opened windows
+        When Perform web interactions windows
 
-        Examples:
-            | TestID    |
-            | WEB_TC003 |
+    # @demo
+    Scenario Outline: Demo Alerts
+        Given A web page is opened alerts
+        When Perform web interactions alerts
+
+@demo
+  Scenario Outline: Demo File Upload
+        Given A web page is opened file upload
+        When Perform web interactions file upload
+
+

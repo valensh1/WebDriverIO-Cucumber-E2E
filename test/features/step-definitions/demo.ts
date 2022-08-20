@@ -116,5 +116,93 @@ When(/^Perform web interactions checkboxes$/, async function () {
       isCheckedElement.click();
     }
   }
+  // await browser.debug();
+});
+
+Given(/^A web page is opened windows$/, async function () {
+  // 1. Launch the browser
+  await browser.url('/windows');
+});
+
+When(/^Perform web interactions windows$/, async function () {
+  // 2. Open new windows
+  await $(`=Click Here`).click(); // Gets link with the text "Click Here" and clicks on that link
+  await $(`=Elemental Selenium`).click(); // Gets link with the text "Elemental Selenium" and clicks on that link
+  let currentWindowTitle = await browser.getTitle(); // Gets title of current window which is the parent window. WebdriverIO doesn't automatically switch to new window opened
+  let parentWindowHandle = await browser.getWindowHandle(); // Gets window string ID which WebdriverIO uses to identify open windows. This is always the window ID of the parent window
+  console.log(`>> currentWindowTitle: ${currentWindowTitle}`);
+
+  // 3. Switch to specific window
+  let windowHandles = await browser.getWindowHandles(); // Gets window string ID's for which WebdriverIO uses to identify open windows and puts them in array
+  for (let i = 0; i < windowHandles.length; i++) {
+    // Loop through windowHandles
+    console.log(`>>Window Handle : ${windowHandles[i]}`);
+    await browser.switchToWindow(windowHandles[i]); // For each windowHandle ID switch to that window
+    let currentWindowTitle = await browser.getTitle(); // Get title of the current window
+    if (
+      currentWindowTitle ===
+      'Elemental Selenium: Receive a Free, Weekly Tip on Using Selenium like a Pro'
+    ) {
+      await browser.switchToWindow(windowHandles[i]); // If the current window title equals "Elemental Selenium: Receive a Free, Weekly Tip on Using Selenium like a Pro" then switch to that window
+      let headerTextEleSel = await $('<h1>').getText(); // Get the text of the h1 tag element in window
+      console.log(`>> headerTextEleSel:${headerTextEleSel}`);
+
+      break;
+    }
+  }
+  // 4. Switch back to parent window
+  await browser.switchToWindow(parentWindowHandle);
+  let parentWindowText = await $('<h3>').getText();
+  console.log(`>> parentWindowText:${parentWindowText}`);
+
+  // await browser.debug()
+});
+
+Given(/^A web page is opened alerts$/, async function () {
+  // await browser.url('/javascript_alerts');
+  await browser.url(
+    'https://admin:admin@the-internet.herokuapp.com/basic_auth'
+  ); // This handles basic authentication; admin is username and admin again is password
+});
+
+When(/^Perform web interactions alerts$/, async function () {
+  //! Alert with only an OK button to click
+  // await $('button=Click for JS Alert').click(); // Click on button that displays the alert
+  // if (await browser.isAlertOpen()) {
+  //   await browser.acceptAlert();  // Clicks OK button on alert
+  // }
+  // await browser.debug();
+
+  //! Alert with an OK button and a Cancel button to click
+  // await $('button=Click for JS Confirm').click(); // Click on button that displays the alert
+  // if (await browser.isAlertOpen()) {
+  //   await browser.dismissAlert(); // Clicks Cancel button on alert
+  // }
+  // await browser.debug();
+
+  //! Alert with and input box and an OK and Cancel buttons to click
+  // await $('button=Click for JS Prompt').click(); // Click on button that displays the alert
+  // if (await browser.isAlertOpen()) {
+  //   const alertText = await browser.getAlertText(); // Gets the text of an alert
+  //   console.log(`alert text is = ${alertText}`);
+  //   await browser.sendAlertText('Hello World this is Shaun Valentine')  // Enters text into alert input box
+  //   await browser.acceptAlert(); // Clicks OK button on alert
+  //   await browser.pause(2000);
+  // }
+  // await browser.debug();
+
+  //! Basic authentication
+  await browser.debug();
+});
+
+Given(/^A web page is opened file upload$/, async function () {
+  await browser.url('/upload');
+});
+
+When(/^Perform web interactions file upload$/, async function () {
+  console.log(`WORKING DIRECTORY = ${process.cwd()}`);
+  // await $('#file-upload').addValue('../../../data/fileUpload/dummy.txt'); CANNOT use relative file paths like this. Must use absolute file paths
+  await $('#file-upload').addValue(`${process.cwd()}/data/fileUpload/dummy.txt`);
+  await $('#file-submit').click();
   await browser.debug();
 });
