@@ -202,7 +202,23 @@ Given(/^A web page is opened file upload$/, async function () {
 When(/^Perform web interactions file upload$/, async function () {
   console.log(`WORKING DIRECTORY = ${process.cwd()}`);
   // await $('#file-upload').addValue('../../../data/fileUpload/dummy.txt'); CANNOT use relative file paths like this. Must use absolute file paths
-  await $('#file-upload').addValue(`${process.cwd()}/data/fileUpload/dummy.txt`);
+  await $('#file-upload').addValue(
+    `${process.cwd()}/data/fileUpload/dummy.txt`
+  );
   await $('#file-submit').click();
+  await browser.debug();
+});
+
+Given(/^A web page is opened frames$/, async function () {
+  await browser.url('/frames');
+});
+
+When(/^Perform web interactions frames$/, async function () {
+  await $('=iFrame').click(); // Click link to go to iframe page
+  const element = await $('#mce_0_ifr');  // Must target the iframe first
+  await browser.switchToFrame(element); //  Then tell WebdriverIO to go into the iframe
+// Interact with Frames
+  await $('#tinymce').setValue('Typing into a frame...'); // Once in the iframe now we can start typing inside the input field
+  await browser.switchToParentFrame(); // Switches back to parent frame
   await browser.debug();
 });

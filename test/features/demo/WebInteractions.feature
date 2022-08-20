@@ -25,9 +25,14 @@ Feature: Web Interactions
         Given A web page is opened alerts
         When Perform web interactions alerts
 
-@demo
-  Scenario Outline: Demo File Upload
+    # @demo
+    Scenario Outline: Demo File Upload
         Given A web page is opened file upload
         When Perform web interactions file upload
+
+    @demo
+    Scenario Outline: Demo Frames
+        Given A web page is opened frames
+        When Perform web interactions frames
 
 
