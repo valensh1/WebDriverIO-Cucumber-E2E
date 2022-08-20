@@ -24,6 +24,7 @@ Then(/^URL should match (.*)$/, async function (expectedURL) {
   chai.expect(url).to.equal(expectedURL);
 });
 
+//? Mimicking A Person Typing In An Input Box
 // Web Interactions
 Given(/^A web page is opened$/, async function () {
   await browser.url('/inputs'); // If you just have quotes inside the method it reads the baseURL from our configuration file called wdio.conf.ts file. If you want to go to a specific route on the base URL you just need to put /route. WebdriverIO will automatically pick up the base URL
@@ -55,6 +56,7 @@ Actions:
   await browser.pause(5000); // Keeps the browser opened/paused for 5 secs
 });
 
+//? Drop-down Menus
 Given(/^A web page is opened drop-down$/, async function () {
   await browser.url('/dropdown'); // If you just have quotes inside the method it reads the baseURL from our configuration file called wdio.conf.ts file. If you want to go to a specific route on the base URL you just need to put /route. WebdriverIO will automatically pick up the base URL
   await browser.setTimeout({ implicit: 15000, pageLoad: 10000 }); // Waits 15 seconds before WebDriverIO says I can't find the element; Will wait 10 seconds before it times out and says I couldn't load the page
@@ -88,6 +90,7 @@ When(/^Perform web interactions drop-down$/, async function () {
   console.log(`>> Options Array: ${arr}`);
 });
 
+//? Checkboxes
 Given(/^A web page is opened checkboxes$/, async function () {
   await browser.url('/checkboxes'); // If you just have quotes inside the method it reads the baseURL from our configuration file called wdio.conf.ts file. If you want to go to a specific route on the base URL you just need to put /route. WebdriverIO will automatically pick up the base URL
   await browser.setTimeout({ implicit: 15000, pageLoad: 10000 }); // Waits 15 seconds before WebDriverIO says I can't find the element; Will wait 10 seconds before it times out and says I couldn't load the page
@@ -95,7 +98,6 @@ Given(/^A web page is opened checkboxes$/, async function () {
 });
 
 When(/^Perform web interactions checkboxes$/, async function () {
-  //? Checkboxes
   //! Assert checkbox at index position 1 is NOT checked
   let checkboxElement = await $('//form[@id="checkboxes"]/input[1]');
   // await checkboxElement.click();
@@ -119,6 +121,7 @@ When(/^Perform web interactions checkboxes$/, async function () {
   // await browser.debug();
 });
 
+//? Windows
 Given(/^A web page is opened windows$/, async function () {
   // 1. Launch the browser
   await browser.url('/windows');
@@ -158,6 +161,7 @@ When(/^Perform web interactions windows$/, async function () {
   // await browser.debug()
 });
 
+//? Alerts
 Given(/^A web page is opened alerts$/, async function () {
   // await browser.url('/javascript_alerts');
   await browser.url(
@@ -195,6 +199,7 @@ When(/^Perform web interactions alerts$/, async function () {
   await browser.debug();
 });
 
+//? File Upload
 Given(/^A web page is opened file upload$/, async function () {
   await browser.url('/upload');
 });
@@ -209,16 +214,44 @@ When(/^Perform web interactions file upload$/, async function () {
   await browser.debug();
 });
 
+//? Frames
 Given(/^A web page is opened frames$/, async function () {
   await browser.url('/frames');
 });
 
 When(/^Perform web interactions frames$/, async function () {
   await $('=iFrame').click(); // Click link to go to iframe page
-  const element = await $('#mce_0_ifr');  // Must target the iframe first
+  const element = await $('#mce_0_ifr'); // Must target the iframe first; This is the id for the iframe
   await browser.switchToFrame(element); //  Then tell WebdriverIO to go into the iframe
-// Interact with Frames
+  // Interact with Frames
   await $('#tinymce').setValue('Typing into a frame...'); // Once in the iframe now we can start typing inside the input field
   await browser.switchToParentFrame(); // Switches back to parent frame
+  await browser.debug();
+});
+
+//? Keys
+Given(/^A web page is opened keys$/, async function () {
+  await browser.url('/frames');
+});
+
+When(/^Perform web interactions keys$/, async function () {
+  await $('=iFrame').click(); // Click link to go to iframe page
+  const element = await $('#mce_0_ifr'); // Must target the iframe first; This is the id for the iframe
+  await browser.switchToFrame(element); //  Then tell WebdriverIO to go into the iframe
+  await $('#tinymce').click();
+  await browser.keys(['Meta', 'A']); // Keys typed on keyboard. Meta is like the CNTRL key; CNTRL + A clears all the content in the iframe input box
+  await browser.pause(2000);
+  await $('#tinymce').setValue('Typing into a frame...'); // Once in the iframe now we can start typing inside the input field
+  await browser.switchToParentFrame(); // Switches back to parent frame
+  await browser.debug();
+});
+
+//? Scrolling
+Given(/^A web page is opened scrolling$/, async function () {
+  await browser.url('https://www.cnbc.com/');
+});
+
+When(/^Perform web interactions scrolling$/, async function () {
+  await $('h3=Most Active').scrollIntoView();
   await browser.debug();
 });

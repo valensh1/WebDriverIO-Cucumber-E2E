@@ -30,9 +30,17 @@ Feature: Web Interactions
         Given A web page is opened file upload
         When Perform web interactions file upload
 
-    @demo
+    # @demo
     Scenario Outline: Demo Frames
         Given A web page is opened frames
         When Perform web interactions frames
 
+    # @demo
+    Scenario Outline: Demo Keys
+        Given A web page is opened keys
+        When Perform web interactions keys
 
+    @demo
+    Scenario Outline: Demo Scrolling
+        Given A web page is opened scrolling
+        When Perform web interactions scrolling
