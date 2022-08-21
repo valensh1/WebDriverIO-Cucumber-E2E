@@ -40,7 +40,7 @@ Feature: Web Interactions
         Given A web page is opened keys
         When Perform web interactions keys
 
-    @demo
+    # @demo
     Scenario Outline: Demo Scrolling
         Given A web page is opened scrolling
         When Perform web interactions scrolling
