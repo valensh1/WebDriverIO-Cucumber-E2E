@@ -1,0 +1,18 @@
+{
+  "actions": [
+    {
+      "type": "key",
+      "id": "keyboard",
+      "actions": [
+        {
+          "type": "keyDown",
+          "value": "1"
+        },
+        {
+          "type": "keyUp",
+          "value": "1"
+        }
+      ]
+    }
+  ]
+}

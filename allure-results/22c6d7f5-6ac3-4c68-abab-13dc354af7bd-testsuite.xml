@@ -1,0 +1,109 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1660970084699' stop='1660970145784'>
+    <name>Web Interactions: Demo Alerts</name>
+    <title>Web Interactions: Demo Alerts</title>
+    <test-cases>
+        <test-case start='1660970084700' status='passed' stop='1660970084701'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.101'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1660970084701' status='passed' stop='1660970085775'>
+            <name>Given A web page is opened alerts</name>
+            <title>Given A web page is opened alerts</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.101'/>
+            </parameters>
+            <steps>
+                <step start='1660970084703' status='passed' stop='1660970085774'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='7eb2e089-fa23-43bb-b69a-b5255d9c2b3e-attachment.json' type='application/json' size='67'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1660970085775' status='broken' stop='1660970145783'>
+            <name>When Perform web interactions alerts</name>
+            <title>When Perform web interactions alerts</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.101'/>
+            </parameters>
+            <steps>
+                <step start='1660970085776' status='passed' stop='1660970085788'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='03ed8751-d212-437e-999a-4e764a44237c-attachment.json' type='application/json' size='92'/>
+                        <attachment title='Response' source='e9b7f283-0667-40f1-98b4-b850c7c434f1-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1660970085792' status='passed' stop='1660970085834'>
+                    <name>POST /session/:sessionId/element/ea519f80-b569-42ca-9569-37f1dfcf35fb/click</name>
+                    <title>POST /session/:sessionId/element/ea519f80-b569-42ca-9569-37f1dfcf35fb/click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1660970085834' status='passed' stop='1660970085836'>
+                    <name>GET /session/:sessionId/alert</name>
+                    <title>GET /session/:sessionId/alert</title>
+                    <attachments>
+                        <attachment title='Response' source='06b2f9f7-c9e0-4d8d-8bbd-2fc912c30459-attachment.json' type='application/json' size='4'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1660970085836' status='passed' stop='1660970085839'>
+                    <name>POST /session/:sessionId/alert/dismiss</name>
+                    <title>POST /session/:sessionId/alert/dismiss</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: function timed out, ensure the promise resolves within 60000 milliseconds</message>
+                <stack-trace>Error: function timed out, ensure the promise resolves within 60000 milliseconds
+                    at Timeout.&lt;anonymous> (/Users/shaunvalentine/Documents/Code/Udemy/WebdriverIO/WDIO-Cucumber-E2E/node_modules/@cucumber/cucumber/src/time.ts:53:14)
+                    at listOnTimeout (node:internal/timers:559:17)
+                    at processTimers (node:internal/timers:502:7)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1660970145783' status='passed' stop='1660970145784'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.101'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

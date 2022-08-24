@@ -1,0 +1,4 @@
+{
+  "using": "css selector",
+  "value": "#Homepage-MarketsModule-14 > section.MarketsModule-row > section.MarketsModule-leftColumn > div:nth-child(1) > section > h3"
+}

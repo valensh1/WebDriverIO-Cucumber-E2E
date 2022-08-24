@@ -1,0 +1,112 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1660972838811' stop='1660972899885'>
+    <name>Web Interactions: Demo File Upload</name>
+    <title>Web Interactions: Demo File Upload</title>
+    <test-cases>
+        <test-case start='1660972838812' status='passed' stop='1660972838813'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.101'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1660972838813' status='passed' stop='1660972839879'>
+            <name>Given A web page is opened file upload</name>
+            <title>Given A web page is opened file upload</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.101'/>
+            </parameters>
+            <steps>
+                <step start='1660972838815' status='passed' stop='1660972839878'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='40178ff2-ac35-4a67-be38-0e2d2715e857-attachment.json' type='application/json' size='56'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1660972839879' status='broken' stop='1660972899884'>
+            <name>When Perform web interactions file upload</name>
+            <title>When Perform web interactions file upload</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.101'/>
+            </parameters>
+            <steps>
+                <step start='1660972839880' status='passed' stop='1660972839891'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='a53b37ea-0709-4d6e-9f7b-eae776b7f54b-attachment.json' type='application/json' size='56'/>
+                        <attachment title='Response' source='d0cf7e9c-9336-40f6-8738-350ef507b554-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1660972839901' status='passed' stop='1660972839929'>
+                    <name>POST /session/:sessionId/element/c01a6f5e-70c9-4245-a35c-dec8483e35c2/value</name>
+                    <title>POST /session/:sessionId/element/c01a6f5e-70c9-4245-a35c-dec8483e35c2/value</title>
+                    <attachments>
+                        <attachment title='Request' source='c2820650-f4c0-44e3-9fb3-95ec767d5597-attachment.json' type='application/json' size='114'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1660972839930' status='passed' stop='1660972839939'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='b89d2852-5988-4027-a9aa-b67ecf8fec06-attachment.json' type='application/json' size='56'/>
+                        <attachment title='Response' source='63f8ca23-befe-4da7-a117-3b63163d5670-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1660972839941' status='passed' stop='1660972840093'>
+                    <name>POST /session/:sessionId/element/a83b0a86-73e3-48d1-a583-ab443abde814/click</name>
+                    <title>POST /session/:sessionId/element/a83b0a86-73e3-48d1-a583-ab443abde814/click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: function timed out, ensure the promise resolves within 60000 milliseconds</message>
+                <stack-trace>Error: function timed out, ensure the promise resolves within 60000 milliseconds
+                    at Timeout.&lt;anonymous> (/Users/shaunvalentine/Documents/Code/Udemy/WebdriverIO/WDIO-Cucumber-E2E/node_modules/@cucumber/cucumber/src/time.ts:53:14)
+                    at listOnTimeout (node:internal/timers:559:17)
+                    at processTimers (node:internal/timers:502:7)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1660972899884' status='passed' stop='1660972899884'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.101'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
