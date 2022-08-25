@@ -21,7 +21,7 @@ In Terminal type in the following inside your project:
 6. npm i chai
 
 7. Then type in the following to Terminal to ensure everything is working correctly:
-npx wdio run wdio.conf.js
+npx wdio run wdio.conf.js.
 
 */
 
