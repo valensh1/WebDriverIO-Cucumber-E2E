@@ -15,3 +15,7 @@ Given(/^Login to inventory web app$/, async function () {
 Given(/^Navigate to tables webpage$/, async function () {
   await browser.url('https://the-internet.herokuapp.com/tables');
 });
+
+Given(/^I navigate to webpage to demo scrolling$/, async function () {
+  await browser.url('https://www.ten-x.com');
+});

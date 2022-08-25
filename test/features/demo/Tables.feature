@@ -1,6 +1,6 @@
 Feature: Tables
 
-    @demo
+    # @demo
     Scenario Outline: Tables Demo
     Given Navigate to tables webpage
     Then Check number of rows and columns
