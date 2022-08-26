@@ -1,0 +1,97 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1661443271876' stop='1661443295567'>
+    <name>Scrolling: Scrolling Demo</name>
+    <title>Scrolling: Scrolling Demo</title>
+    <test-cases>
+        <test-case start='1661443271876' status='passed' stop='1661443271877'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-2'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.102'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1661443271878' status='passed' stop='1661443273725'>
+            <name>Given I navigate to webpage to demo scrolling</name>
+            <title>Given I navigate to webpage to demo scrolling</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-2'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.102'/>
+            </parameters>
+            <steps>
+                <step start='1661443271879' status='passed' stop='1661443273724'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='0d7dd7d6-8e6d-4f77-aaa6-acdcb63119b5-attachment.json' type='application/json' size='37'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1661443273725' status='passed' stop='1661443295566'>
+            <name>When scroll down</name>
+            <title>When scroll down</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-2'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.102'/>
+            </parameters>
+            <steps>
+                <step start='1661443273725' status='passed' stop='1661443273732'>
+                    <name>POST /session/:sessionId/execute/sync</name>
+                    <title>POST /session/:sessionId/execute/sync</title>
+                    <attachments>
+                        <attachment title='Request' source='731dac99-3404-4005-8ba1-b22954ffe1bf-attachment.json' type='application/json' size='131'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1661443276739' status='passed' stop='1661443276772'>
+                    <name>POST /session/:sessionId/execute/sync</name>
+                    <title>POST /session/:sessionId/execute/sync</title>
+                    <attachments>
+                        <attachment title='Request' source='0deb61a8-feb7-44fd-9147-319ffbc238a6-attachment.json' type='application/json' size='132'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1661443276773' status='passed' stop='1661443276782'>
+                    <name>POST /session/:sessionId/execute/sync</name>
+                    <title>POST /session/:sessionId/execute/sync</title>
+                    <attachments>
+                        <attachment title='Request' source='340ee87b-dd5f-45e7-9bdf-bf3cffb11e8a-attachment.json' type='application/json' size='139'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1661443295566' status='passed' stop='1661443295566'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-2'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.102'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
