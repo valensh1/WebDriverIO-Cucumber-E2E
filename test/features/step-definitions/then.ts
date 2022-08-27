@@ -125,6 +125,18 @@ Then(/^Get first names of people who owe more than \$50$/, async function () {
       arr.push(firstName);
     }
   }
-  console.log(`This is the final first name array of people who owe more than $50 >>> ${JSON.stringify(arr)}`); // Prints ["Frank", "Jason"]
-  console.log(`This is the final first name array of people who owe more than $50 >>> ${arr}`); // Prints Frank, Jason
+  console.log(
+    `This is the final first name array of people who owe more than $50 >>> ${JSON.stringify(
+      arr
+    )}`
+  ); // Prints ["Frank", "Jason"]
+  console.log(
+    `This is the final first name array of people who owe more than $50 >>> ${arr}`
+  ); // Prints Frank, Jason
+});
+
+Then(/^I log into website to demo refreshing$/, async function () {
+    const userName = 'standard_user';
+    await $(`#user-name`).setValue(`${userName}`)
+    await browser.pause(2000);
 });

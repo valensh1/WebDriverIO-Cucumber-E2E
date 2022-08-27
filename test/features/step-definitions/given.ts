@@ -19,3 +19,7 @@ Given(/^Navigate to tables webpage$/, async function () {
 Given(/^I navigate to webpage to demo scrolling$/, async function () {
   await browser.url('https://www.ten-x.com');
 });
+
+Given(/^I navigate to website to demo refreshing of screen$/, async function () {
+  await browser.url(`https://www.saucedemo.com`);
+})
