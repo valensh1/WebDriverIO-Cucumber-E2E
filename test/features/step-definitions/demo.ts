@@ -4,6 +4,7 @@ import chai from 'chai';
 Given(/^Google page is opened$/, async function () {
   await browser.url('https://www.google.com');
   await browser.pause(1000);
+  console.log(`This is the browser object >>> ${JSON.stringify(browser)}`);
 });
 
 When(/^Search with (.*)$/, async function (searchItem) {
@@ -11,6 +12,8 @@ When(/^Search with (.*)$/, async function (searchItem) {
   let ele = await $(`[name=q]`);
   await ele.setValue(searchItem);
   await browser.keys('Enter'); // Simulates hitting ENTER on keyboard
+  console.log(`This is the element object >>> ${JSON.stringify(ele)}`);
+
 });
 
 Then(/^Click on the first search result$/, async function () {
