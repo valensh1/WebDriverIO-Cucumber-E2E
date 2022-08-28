@@ -16,6 +16,10 @@
         "wdio-chromedriver-service": "^7.3.2"
     },
     "scripts": {
-        "wdio": "wdio run test/wdio.conf.ts"
+        "demo": "export HEADLESS=N && npx wdio wdio.conf.ts --cucumberOpts.tagExpression='@demo'",
+        "smoke": "export HEADLESS=Y && npx wdio wdio.conf.ts --cucumberOpts.tagExpression='@smoke'"
+    },
+    "dependencies": {
+        "dotenv": "^16.0.1"
     }
 }

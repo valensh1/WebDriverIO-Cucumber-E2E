@@ -1,5 +1,9 @@
 import type { Options } from '@wdio/types';
 
+let headless = process.env.HEADLESS;  // The script tags such as demo or smoke created in our package.json file create a value called HEADLESS on the process.env object and we are accessing it here and saving it to a variable called headless here in this file
+console.log(`The headless flag = ${headless}`);
+
+
 export const config: Options.Testrunner = {
   //
   // ====================
@@ -81,9 +85,24 @@ export const config: Options.Testrunner = {
       // maxInstances can get overwritten per capability. So if you have an in-house Selenium
       // grid with only 5 firefox instances available you can make sure that not more than
       // 5 instances get started at a time.
+
+      /*
+        Additional Chrome Options:
+          --headless
+          --disable-dev-shm-usage
+          --no-sandbox
+          --window-size=1920,1080
+          --disable-gpu
+          --proxy-server=https://<webaddress here>
+          --binary=<location>
+          --auth-server-whitelist=""        
+      */
       maxInstances: 5,
       //
       browserName: 'chrome',
+      'goog:chromeOptions': {
+        args: headless.toUpperCase() === 'Y' ? ['--headless', '--disable-dev-shm-usage', '--no-sandbox', '--window-size=1920,1080'] : [],
+      },
       acceptInsecureCerts: true,
       timeouts: { implicit: 15000, pageLoad: 20000, script: 30000 },
       // If outputDir is provided WebdriverIO can capture driver session logs
