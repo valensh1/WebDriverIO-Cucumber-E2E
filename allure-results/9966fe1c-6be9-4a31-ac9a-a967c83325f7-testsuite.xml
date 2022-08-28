@@ -1,0 +1,80 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1661622982847' stop='1661622986150'>
+    <name>Refresh Feature: Refresh page demo</name>
+    <title>Refresh Feature: Refresh page demo</title>
+    <test-cases>
+        <test-case start='1661622982848' status='passed' stop='1661622982849'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-2'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.101'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1661622982849' status='passed' stop='1661622986148'>
+            <name>Given I log into website to demo refreshing of screen</name>
+            <title>Given I log into website to demo refreshing of screen</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-2'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.101'/>
+            </parameters>
+            <steps>
+                <step start='1661622982851' status='passed' stop='1661622983145'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='546d9691-8876-4cb4-9301-b6d4edf036f4-attachment.json' type='application/json' size='41'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1661622986149' status='broken' stop='1661622986149'>
+            <name>When I log into website</name>
+            <title>When I log into website</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-2'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.101'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Step "I log into website" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.</message>
+                <stack-trace>Step "I log into website" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.
+                	at Feature(/Users/shaunvalentine/Documents/Code/Udemy/WebdriverIO/WDIO-Cucumber-E2E/test/features/demo/Refresh.feature):1:1
+                	at Scenario(Refresh page demo):3:5
+                	at Step(I log into website):5:9
+                </stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1661622986149' status='passed' stop='1661622986150'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-2'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.101'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

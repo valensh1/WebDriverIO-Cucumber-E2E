@@ -1,0 +1,4 @@
+{
+  "using": "xpath",
+  "value": "//table[@id=\"table1\"]/tbody/tr[2]/td[4]"
+}
