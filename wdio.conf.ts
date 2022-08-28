@@ -1,4 +1,6 @@
 import type { Options } from '@wdio/types';
+import dotenv from 'dotenv';
+dotenv.config();
 
 let headless = process.env.HEADLESS;  // The script tags such as demo or smoke created in our package.json file create a value called HEADLESS on the process.env object and we are accessing it here and saving it to a variable called headless here in this file
 console.log(`The headless flag = ${headless}`);

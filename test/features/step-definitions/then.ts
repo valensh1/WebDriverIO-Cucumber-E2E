@@ -138,15 +138,15 @@ Then(/^Get first names of people who owe more than \$50$/, async function () {
 Then(/^I log into website to demo refreshing$/, async function () {
   try {
     // Login to website
-    const userName = 'standard_user';
-    const pw = 'secret_sauce';
+    const userName = process.env.USERNAME;
+    const pw = process.env.PASSWORD;
     await $(`#ser-name`).setValue(`${userName}`); // Mispelled ID name on purpose to catch error block
     await $(`#password`).setValue(`${pw}`);
     await $(`#login-button`).click();
   } catch (error) {
     console.log(`Error in first attempt. Retrying....`);
     await browser.refresh(); // Just a regular page refresh  <<<<<<------------
-    const userName = 'standard_user';
+    const userName = process.env.USERNAME;
     const pw = 'secret_sauce';
     await $(`#user-name`).setValue(`${userName}`);
     await $(`#password`).setValue(`${pw}`);
@@ -157,7 +157,7 @@ Then(/^I log into website to demo refreshing$/, async function () {
   await browser.pause(4000);
   await browser.reloadSession();
   const userName2 = `problem_user`;
-  const pw = 'secret_sauce';
+  const pw = process.env.PASSWORD;
   await browser.url(`https://www.saucedemo.com`);
   await $(`#user-name`).setValue(`${userName2}`);
   await $(`#password`).setValue(`${pw}`);
