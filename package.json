@@ -16,8 +16,11 @@
         "wdio-chromedriver-service": "^7.3.2"
     },
     "scripts": {
-        "demo": "export HEADLESS=N && npx wdio wdio.conf.ts --cucumberOpts.tagExpression='@demo'",
-        "smoke": "export HEADLESS=Y && npx wdio wdio.conf.ts --cucumberOpts.tagExpression='@smoke'"
+        "test:debug": "export DEBUG=Y && export HEADLESS=N && npx wdio config/wdio.test.conf.ts --cucumberOpts.tagExpression='@demo'",
+        "test:demo": "export DEBUG=N && export HEADLESS=N && npx wdio config/wdio.test.conf.ts --cucumberOpts.tagExpression='@demo'",
+        "test:smoke": "export DEBUG=N && export HEADLESS=Y && npx wdio config/wdio.test.conf.ts --cucumberOpts.tagExpression='@smoke'",
+        "uat:demo": "export DEBUG=N && export HEADLESS=N && npx wdio config/wdio.uat.conf.ts --cucumberOpts.tagExpression='@demo'",
+        "uat:smoke": "export DEBUG=N && export HEADLESS=Y && npx wdio config/wdio.uat.conf.ts --cucumberOpts.tagExpression='@smoke'"
     },
     "dependencies": {
         "dotenv": "^16.0.1"

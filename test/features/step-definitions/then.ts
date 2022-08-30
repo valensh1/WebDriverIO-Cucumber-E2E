@@ -168,3 +168,16 @@ Then(/^I log into website to demo refreshing$/, async function () {
   await browser.forward();
   await browser.pause(4000);
 });
+
+Then(/^I click on basketball home page$/, async function () {
+  const nba = await $(`#global-nav > ul > li.sports.menu-nba > a`);
+  if (await nba.isDisplayed()) await nba.click();
+  await browser.pause(2000);
+});
+
+Then(/^I click on football home page$/, async function () {
+  const nfl = await $(`#global-nav > ul > li.sports.menu-nfl > a`);
+  if (await nfl.isDisplayed()) await nfl.click();
+  await browser.pause(2000);
+
+});

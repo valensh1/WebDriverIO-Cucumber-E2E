@@ -4,7 +4,8 @@ dotenv.config();
 
 let headless = process.env.HEADLESS;  // The script tags such as demo or smoke created in our package.json file create a value called HEADLESS on the process.env object and we are accessing it here and saving it to a variable called headless here in this file
 console.log(`The headless flag = ${headless}`);
-
+let debug = process.env.DEBUG;
+console.log(`The debug flag = ${debug}`);
 
 export const config: Options.Testrunner = {
   //
@@ -120,7 +121,7 @@ export const config: Options.Testrunner = {
   // Define all options that are relevant for the WebdriverIO instance here
   //
   // Level of logging verbosity: trace | debug | info | warn | error | silent
-  logLevel: 'info',
+  logLevel: debug.toUpperCase() === 'Y' ? 'info' : 'error',
   //
   // Set specific log levels per logger
   // loggers:
