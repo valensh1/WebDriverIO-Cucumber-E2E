@@ -1,0 +1,68 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1661839426051' stop='1661839456121'>
+    <name>Showing how the background rule works in Cucumber: Log into ESPN and go to football page</name>
+    <title>Showing how the background rule works in Cucumber: Log into ESPN and go to football page</title>
+    <test-cases>
+        <test-case start='1661839426052' status='passed' stop='1661839426052'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.101'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1661839426052' status='passed' stop='1661839456121'>
+            <name>Then I click on football home page</name>
+            <title>Then I click on football home page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.101'/>
+            </parameters>
+            <steps>
+                <step start='1661839426053' status='passed' stop='1661839441107'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='390206b4-6279-4905-a9f0-015c710fcc7b-attachment.json' type='application/json' size='85'/>
+                        <attachment title='Response' source='75e187a2-9c62-4e8c-a996-dd0fe2630ec7-attachment.json' type='application/json' size='1968'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1661839441109' status='passed' stop='1661839456119'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='bdb2d737-8d4f-447d-8168-55ba6c5b9ee7-attachment.json' type='application/json' size='85'/>
+                        <attachment title='Response' source='9312168b-0f3f-405c-8786-e42e308ccab2-attachment.json' type='application/json' size='1968'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1661839456121' status='passed' stop='1661839456121'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.101'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

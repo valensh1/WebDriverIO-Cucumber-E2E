@@ -1,0 +1,74 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1661838737734' stop='1661838767935'>
+    <name>Showing how the background rule works in Cucumber: Log into ESPN and go to basketball page</name>
+    <title>Showing how the background rule works in Cucumber: Log into ESPN and go to basketball page</title>
+    <test-cases>
+        <test-case start='1661838737734' status='passed' stop='1661838737736'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.101'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1661838737736' status='broken' stop='1661838767934'>
+            <name>Then I click on basketball home page</name>
+            <title>Then I click on basketball home page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.101'/>
+            </parameters>
+            <steps>
+                <step start='1661838737738' status='passed' stop='1661838752776'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='4b5dc162-8cea-4690-8234-93f6b5054f96-attachment.json' type='application/json' size='85'/>
+                        <attachment title='Response' source='84adfa0f-89f4-4d5c-94ff-bc48c1bf2f96-attachment.json' type='application/json' size='1968'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1661838752782' status='passed' stop='1661838767928'>
+                    <name>POST /session/:sessionId/elements</name>
+                    <title>POST /session/:sessionId/elements</title>
+                    <attachments>
+                        <attachment title='Request' source='435045cb-f255-4919-8b67-b122f278af73-attachment.json' type='application/json' size='85'/>
+                        <attachment title='Response' source='eda89d80-52aa-45c5-87d4-bc205b8014bd-attachment.json' type='application/json' size='2'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Can't call click on element with selector "#global-nav > ul > li.sports.menu-nba > a" because element wasn't found</message>
+                <stack-trace>Error: Can't call click on element with selector "#global-nav > ul > li.sports.menu-nba > a" because element wasn't found
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+                    at async World.&lt;anonymous> (/Users/shaunvalentine/Documents/Code/Udemy/WebdriverIO/WDIO-Cucumber-E2E/test/features/step-definitions/then.ts:173:3)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1661838767934' status='passed' stop='1661838767935'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.101'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

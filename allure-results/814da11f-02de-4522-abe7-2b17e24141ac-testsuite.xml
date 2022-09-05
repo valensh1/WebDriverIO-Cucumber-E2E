@@ -1,0 +1,84 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1661839238142' stop='1661839283296'>
+    <name>Showing how the background rule works in Cucumber: Log into ESPN and go to football page</name>
+    <title>Showing how the background rule works in Cucumber: Log into ESPN and go to football page</title>
+    <test-cases>
+        <test-case start='1661839238142' status='passed' stop='1661839238142'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.101'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1661839238142' status='broken' stop='1661839283296'>
+            <name>Then I click on football home page</name>
+            <title>Then I click on football home page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.101'/>
+            </parameters>
+            <steps>
+                <step start='1661839238143' status='passed' stop='1661839253201'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='e7b0ac3e-6f1b-4650-97a9-b8be0462a027-attachment.json' type='application/json' size='85'/>
+                        <attachment title='Response' source='d24ccd60-077d-4d4c-bd7d-bf7f3758c109-attachment.json' type='application/json' size='1968'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1661839253203' status='passed' stop='1661839283292'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='0bffd347-1b65-474d-aa9c-d2be18d960df-attachment.json' type='application/json' size='85'/>
+                        <attachment title='Response' source='39bccb32-fd7d-4075-a935-96641919b282-attachment.json' type='application/json' size='2'/>
+                    </attachments>
+                    <steps>
+                        <step start='1661839253205' status='passed' stop='1661839268255'>
+                            <name>POST /session/:sessionId/elements</name>
+                            <title>POST /session/:sessionId/elements</title>
+                            <attachments>
+                                <attachment title='Request' source='f114a54d-17ed-4917-aa61-a538ebfcfa67-attachment.json' type='application/json' size='85'/>
+                                <attachment title='Response' source='33e02130-539c-441a-a815-b607fbcca4a4-attachment.json' type='application/json' size='1968'/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Can't call click on element with selector "#global-nav > ul > li.sports.menu-nfl > a" because element wasn't found</message>
+                <stack-trace>Error: Can't call click on element with selector "#global-nav > ul > li.sports.menu-nfl > a" because element wasn't found
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+                    at async World.&lt;anonymous> (/Users/shaunvalentine/Documents/Code/Udemy/WebdriverIO/WDIO-Cucumber-E2E/test/features/step-definitions/then.ts:179:26)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1661839283296' status='passed' stop='1661839283296'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.101'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
