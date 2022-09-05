@@ -56,4 +56,6 @@ Given(
 
 Given(/^I (.*)\s? navigate to ESPN page$/, async function (prefix) {
   await browser.url(`https:www.espn.com`);
+  throw new Error("This is a error given on purpose to show example of a screenshot");
+  
 });

@@ -1,4 +1,0 @@
-{
-  "script": "return (() => {\n        window.scrollTo(0, document.body.scrollHeight);\n    }).apply(null, arguments)",
-  "args": []
-}

@@ -1,4 +1,0 @@
-{
-  "using": "css selector",
-  "value": "table#table1 > tbody > tr:nth-child(3"
-}

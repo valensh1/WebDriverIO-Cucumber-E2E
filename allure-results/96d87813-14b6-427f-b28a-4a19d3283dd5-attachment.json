@@ -1,4 +1,0 @@
-{
-  "script": "return (() => {\n        window.scrollBy(0, window.innerHeight);\n    }).apply(null, arguments)",
-  "args": []
-}
