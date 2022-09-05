@@ -1,0 +1,99 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1662362242789' stop='1662362244411'>
+    <name>Regular Expression: Regular Expression Demo</name>
+    <title>Regular Expression: Regular Expression Demo</title>
+    <test-cases>
+        <test-case start='1662362242790' status='passed' stop='1662362242790'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-4'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.101'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1662362242790' status='passed' stop='1662362244410'>
+            <name>Given As an problem_user I login to inventory web app</name>
+            <title>Given As an problem_user I login to inventory web app</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-4'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.101'/>
+            </parameters>
+            <steps>
+                <step start='1662362242790' status='passed' stop='1662362242829'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='1899186e-fbe9-4629-9108-84e6cb60ff25-attachment.json' type='application/json' size='41'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1662362242829' status='passed' stop='1662362242849'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='7e6b7a8a-a0de-4d89-ad78-0c6c2569469d-attachment.json' type='application/json' size='54'/>
+                        <attachment title='Response' source='4b5efe0c-f548-45cf-b049-807128d32834-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1662362242850' status='passed' stop='1662362242874'>
+                    <name>POST /session/:sessionId/element/c0391989-9e9b-4d95-85a1-469dd0dc6b87/clear</name>
+                    <title>POST /session/:sessionId/element/c0391989-9e9b-4d95-85a1-469dd0dc6b87/clear</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1662362242875' status='passed' stop='1662362242909'>
+                    <name>POST /session/:sessionId/element/c0391989-9e9b-4d95-85a1-469dd0dc6b87/value</name>
+                    <title>POST /session/:sessionId/element/c0391989-9e9b-4d95-85a1-469dd0dc6b87/value</title>
+                    <attachments>
+                        <attachment title='Request' source='3c99c1d0-8e4e-43f3-92a8-16f2390bbd01-attachment.json' type='application/json' size='28'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1662362244410' status='broken' stop='1662362244410'>
+            <name>Given I should not navigate to ESPN page</name>
+            <title>Given I should not navigate to ESPN page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-4'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.101'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>function has 0 arguments, should have 1 (if synchronous or returning a promise) or 2 (if accepting a callback)</message>
+                <stack-trace>function has 0 arguments, should have 1 (if synchronous or returning a promise) or 2 (if accepting a callback)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1662362244410' status='passed' stop='1662362244411'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-4'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-104.0.5112.101'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

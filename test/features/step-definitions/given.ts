@@ -1,4 +1,4 @@
-import { Given, When, Then } from '@wdio/cucumber-framework';
+import { Given, When, Then, DataTable } from '@wdio/cucumber-framework';
 import chai from 'chai';
 
 Given(/^Login to inventory web app$/, async function () {
@@ -23,15 +23,37 @@ Given(/^I navigate to webpage to demo scrolling$/, async function () {
   await browser.url('https://www.ten-x.com');
 });
 
-Given(/^I navigate to website to demo refreshing of screen$/, async function () {
-  await browser.url(`https://www.saucedemo.com`);
-})
+Given(
+  /^I navigate to website to demo refreshing of screen$/,
+  async function () {
+    await browser.url(`https://www.saucedemo.com`);
+  }
+);
 
 Given(/^I navigate to CNBC$/, async function () {
   await browser.url('https://www.cnbc.com');
   await browser.pause(3000);
-})
+});
 
 Given(/^I navigate to ESPN$/, async function () {
   await browser.url('https://www.espn.com');
-})
+});
+
+//? Regular Expression Example
+Given(
+  /^As (a|an) (.*) I login to inventory web app$/,
+  async function (prefix, userType, data) {
+    // userType is <User> from feature file
+   let dt = data.hashes();
+   console.log(`Data table --> ${JSON.stringify(dt)}`);
+    await browser.url('https://www.saucedemo.com');
+    console.log(`We are running Regular Expression Tests!!!`);
+    const userName = await $(`#user-name`);
+    await userName.setValue(dt[0].Player);
+    await browser.pause(1500);
+  }
+);
+
+Given(/^I (.*)\s? navigate to ESPN page$/, async function (prefix) {
+  await browser.url(`https:www.espn.com`);
+});

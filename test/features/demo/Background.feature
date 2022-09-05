@@ -1,4 +1,4 @@
-@demo
+# @demo
 Feature: Showing how the background rule works in Cucumber
 
     Background: Navigate to ESPN

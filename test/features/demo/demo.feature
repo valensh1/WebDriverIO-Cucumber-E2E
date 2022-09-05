@@ -7,5 +7,5 @@ Feature: Demo name
         Then URL should match <ExpectedURL>
 
         Examples:
-            | TestID     | SearchItem | ExpectedURL            |
-            | DEMO_TC001 | WebDriverIO       | https://webdriver.io/ |
+            | TestID     | SearchItem  | ExpectedURL           |
+            | DEMO_TC001 | WebDriverIO | https://webdriver.io/ |
