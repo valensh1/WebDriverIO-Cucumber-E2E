@@ -1,0 +1,103 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1662840900987' stop='1662840902979'>
+    <name>World Feature: World Feature Demo</name>
+    <title>World Feature: World Feature Demo</title>
+    <test-cases>
+        <test-case start='1662840900988' status='passed' stop='1662840900989'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-8'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-105.0.5195.102'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1662840900989' status='passed' stop='1662840902022'>
+            <name>Given I log into CNBC page</name>
+            <title>Given I log into CNBC page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-8'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-105.0.5195.102'/>
+            </parameters>
+            <steps>
+                <step start='1662840900990' status='passed' stop='1662840902021'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='5dae1601-5e5d-4e53-9597-a64d7ebdb744-attachment.json' type='application/json' size='36'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1662840902022' status='broken' stop='1662840902978'>
+            <name>Then check AAPL stock price</name>
+            <title>Then check AAPL stock price</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-8'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-105.0.5195.102'/>
+            </parameters>
+            <steps>
+                <step start='1662840902024' status='passed' stop='1662840902050'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='2838d382-2f6c-45c4-9dab-cce85bbac032-attachment.json' type='application/json' size='126'/>
+                        <attachment title='Response' source='a793822f-0888-4ff3-9ae8-2e4dd56503b5-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1662840902054' status='broken' stop='1662840902978'>
+                    <name>POST /session/:sessionId/element/65a39f66-061e-4622-8849-f79424ba38ee/clear</name>
+                    <title>POST /session/:sessionId/element/65a39f66-061e-4622-8849-f79424ba38ee/clear</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1662840902089' status='passed' stop='1662840902977'>
+                            <name>GET /session/:sessionId/screenshot</name>
+                            <title>GET /session/:sessionId/screenshot</title>
+                            <attachments>
+                                <attachment title='Screenshot' source='c66ced1b-f66c-4f2c-8b72-7a13d74d768a-attachment.png' type='image/png' size='1236557'/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>invalid element state: invalid element state</message>
+                <stack-trace>invalid element state: invalid element state
+                  (Session info: chrome=105.0.5195.102)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1662840902978' status='passed' stop='1662840902978'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-8'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-105.0.5195.102'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,105 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1662840640738' stop='1662840672307'>
+    <name>World Feature: World Feature Demo</name>
+    <title>World Feature: World Feature Demo</title>
+    <test-cases>
+        <test-case start='1662840640739' status='passed' stop='1662840640740'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-8'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-105.0.5195.102'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1662840640740' status='passed' stop='1662840641474'>
+            <name>Given I log into CNBC page</name>
+            <title>Given I log into CNBC page</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-8'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-105.0.5195.102'/>
+            </parameters>
+            <steps>
+                <step start='1662840640741' status='passed' stop='1662840641473'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='c9c99e9b-5968-4b45-b353-3922f5a1c2a6-attachment.json' type='application/json' size='36'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1662840641474' status='broken' stop='1662840672306'>
+            <name>Then check AAPL stock price</name>
+            <title>Then check AAPL stock price</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-8'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-105.0.5195.102'/>
+            </parameters>
+            <steps>
+                <step start='1662840641476' status='passed' stop='1662840656522'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='8e5f3f85-41f4-4eb1-8800-8ce0c57e37ec-attachment.json' type='application/json' size='127'/>
+                        <attachment title='Response' source='ef475d8e-bb16-4e4e-ace3-574459c23e18-attachment.json' type='application/json' size='2010'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1662840656528' status='passed' stop='1662840671556'>
+                    <name>POST /session/:sessionId/elements</name>
+                    <title>POST /session/:sessionId/elements</title>
+                    <attachments>
+                        <attachment title='Request' source='9e8a1a4c-6c1a-4317-934c-35054240ba1c-attachment.json' type='application/json' size='127'/>
+                        <attachment title='Response' source='5b4eb69a-8163-47fc-8ed7-4d123d19c286-attachment.json' type='application/json' size='2'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1662840671560' status='passed' stop='1662840672306'>
+                    <name>GET /session/:sessionId/screenshot</name>
+                    <title>GET /session/:sessionId/screenshot</title>
+                    <attachments>
+                        <attachment title='Screenshot' source='ace1cc9d-7e23-4927-ad06-a580ba80c23e-attachment.png' type='image/png' size='1312188'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: Can't call setValue on element with selector "s#GlobalNavigation > div.CNBCGlobalNav-globalNavigation > div > div > button > span" because element wasn't found</message>
+                <stack-trace>Error: Can't call setValue on element with selector "s#GlobalNavigation > div.CNBCGlobalNav-globalNavigation > div > div > button > span" because element wasn't found
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+                    at async CustomWorld.&lt;anonymous> (/Users/shaunvalentine/Documents/Code/Udemy/WebdriverIO/WDIO-Cucumber-E2E/test/features/step-definitions/then.ts:187:3)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1662840672306' status='passed' stop='1662840672307'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-8'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-105.0.5195.102'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

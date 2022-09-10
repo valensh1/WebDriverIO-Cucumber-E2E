@@ -2,7 +2,7 @@ Feature: Regular Expression
 
     Regular Expression Demo with Examples
 
-    @demo
+    # @demo
     Scenario Outline: Regular Expression Demo
         Given As an <User> I login to inventory web app
             | League | Team     | Player         |

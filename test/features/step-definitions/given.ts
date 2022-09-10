@@ -57,5 +57,11 @@ Given(
 Given(/^I (.*)\s? navigate to ESPN page$/, async function (prefix) {
   await browser.url(`https:www.espn.com`);
   throw new Error("This is a error given on purpose to show example of a screenshot");
-  
 });
+
+//? WORLD CONSTRUCTOR VARIABLE TO PASS TO OTHER STEP-DEFINITIONS IN SCENARIO
+Given(/^I log into CNBC page$/, async function () {
+  await browser.url('https://www.cnbc.com');
+  this.appid = 'appIDTEST to pass to other step-definitions';
+  this.testNo = 23;
+})

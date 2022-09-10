@@ -179,5 +179,18 @@ Then(/^I click on football home page$/, async function () {
   const nfl = await $(`#global-nav > ul > li.sports.menu-nfl > a`);
   if (await nfl.isDisplayed()) await nfl.click();
   await browser.pause(2000);
-
 });
+
+//? WORLD CONSTRUCTOR VARIABLE TO PASS TO OTHER STEP-DEFINITIONS IN SCENARIO
+Then(/^check (.*) stock price$/, async function(prefix) {
+  const searchBar = await $('#GlobalNavigation > div.CNBCGlobalNav-globalNavigation > div > div > button > span');
+  await searchBar.click();
+  const inputField = await $('#query');
+  await inputField.setValue('AAPL');
+  await browser.pause(2000);
+  await browser.keys(['Meta', 'Enter']);
+  await browser.pause(2000);
+  console.log(`APP ID >>> SEE IT HERE >>> ${this.appid}`);
+  console.log(`TEST NO >>> SEE IT HERE >>> ${this.testNo}`);
+})
+
