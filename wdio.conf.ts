@@ -1,4 +1,4 @@
-//@ts-nocheck
+// @ts-nocheck
 import dotenv from 'dotenv';
 import allure from '@wdio/allure-reporter';
 const fs = require('fs-extra')
@@ -59,6 +59,7 @@ export const config: Options.Testrunner = {
   // then the current working directory is where your `package.json` resides, so `wdio`
   // will be called from there.
   //
+  currentDate: new Date(),
   specs: ['./test/features/**/*.feature'],
   // Patterns to exclude.
   exclude: [
