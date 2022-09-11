@@ -184,13 +184,14 @@ Then(/^I click on football home page$/, async function () {
 //? WORLD CONSTRUCTOR VARIABLE TO PASS TO OTHER STEP-DEFINITIONS IN SCENARIO
 Then(/^check (.*) stock price$/, async function(prefix) {
   const searchBar = await $('#GlobalNavigation > div.CNBCGlobalNav-globalNavigation > div > div > button > span');
-  await searchBar.click();
-  const inputField = await $('#query');
-  await inputField.setValue('AAPL');
+  await searchBar.click(); // Click on field to open search bar
+  const inputField = await $('#query'); // Get search bar element
+  await inputField.waitForDisplayed({timeout: 5000});
+  await inputField.setValue('AAPL'); // Set value in search bar to AAPL
   await browser.pause(2000);
-  await browser.keys(['Meta', 'Enter']);
+  await browser.keys(['Meta', 'Enter']); // Hit enter
   await browser.pause(2000);
-  console.log(`APP ID >>> SEE IT HERE >>> ${this.appid}`);
-  console.log(`TEST NO >>> SEE IT HERE >>> ${this.testNo}`);
+  console.log(`APP ID >>> SEE IT HERE >>> ${this.appid}`); // appid passed to this step from Given step in World Feature 
+  console.log(`TEST NO >>> SEE IT HERE >>> ${this.testNo}`); // testNo passed to this step from Given step in World Feature 
 })
 

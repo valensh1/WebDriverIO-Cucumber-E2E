@@ -62,6 +62,7 @@ Given(/^I (.*)\s? navigate to ESPN page$/, async function (prefix) {
 //? WORLD CONSTRUCTOR VARIABLE TO PASS TO OTHER STEP-DEFINITIONS IN SCENARIO
 Given(/^I log into CNBC page$/, async function () {
   await browser.url('https://www.cnbc.com');
+  await browser.maximizeWindow();
   this.appid = 'appIDTEST to pass to other step-definitions';
   this.testNo = 23;
 })

@@ -1,0 +1,35 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1662868381282' stop='1662868387933'>
+    <name>World Feature</name>
+    <title>World Feature</title>
+    <test-cases>
+        <test-case start='1662868381291' status='passed' stop='1662868387932'>
+            <name>World Feature Demo</name>
+            <title>World Feature Demo</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-8'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-105.0.5195.102'/>
+                <parameter kind='environment-variable' name='Environment:' value='TEST'/>
+            </parameters>
+            <steps>
+                <step start='1662868381293' status='passed' stop='1662868382382'>
+                    <name>Given I log into CNBC page</name>
+                    <title>Given I log into CNBC page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1662868382382' status='passed' stop='1662868387931'>
+                    <name>Then check AAPL stock price</name>
+                    <title>Then check AAPL stock price</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

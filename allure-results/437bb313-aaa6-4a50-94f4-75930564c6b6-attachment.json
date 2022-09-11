@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": ".//span[normalize-space() = \"Search quotes, news & videos\"]"
-}
