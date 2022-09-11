@@ -1,5 +1,7 @@
 import { Given, When, Then, DataTable } from '@wdio/cucumber-framework';
 import chai from 'chai';
+import logger from '../../helper/logger';
+import reporter from '../../helper/reporter';
 
 Given(/^Login to inventory web app$/, async function () {
   // Navigate to inventory app
@@ -61,8 +63,12 @@ Given(/^I (.*)\s? navigate to ESPN page$/, async function (prefix) {
 
 //? WORLD CONSTRUCTOR VARIABLE TO PASS TO OTHER STEP-DEFINITIONS IN SCENARIO
 Given(/^I log into CNBC page$/, async function () {
+  reporter.addStep(this.testNo, 'info', 'Login to CNBC');
+  logger.info('Logging into CNBC...'); // Using logger
   await browser.url('https://www.cnbc.com');
   await browser.maximizeWindow();
   this.appid = 'appIDTEST to pass to other step-definitions';
   this.testNo = 23;
+  reporter.addStep(this.testNo, 'debug', 'Login to CNBC was SUCCESSFUL!!!!');
+
 })

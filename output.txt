@@ -1,0 +1,62 @@
+
+> webdriverio-tests@0.1.0 test:demo
+> export DEBUG=N && export HEADLESS=N && npx wdio config/wdio.test.conf.ts --cucumberOpts.tagExpression='@demo'
+
+The headless flag = N
+The debug flag = N
+
+Execution of 9 workers started at 2022-09-11T07:31:59.323Z
+
+success!
+[0-1] The headless flag = N
+[0-1] The debug flag = N
+[0-2] The headless flag = N
+[0-0] The headless flag = N
+[0-0] The debug flag = N
+[0-2] The debug flag = N
+[0-4] The headless flag = N
+[0-4] The debug flag = N
+[0-3] The headless flag = N
+[0-3] The debug flag = N
+[0-5] The headless flag = N
+[0-5] The debug flag = N
+[0-7] The headless flag = N
+[0-7] The debug flag = N
+[0-6] The headless flag = N
+[0-6] The debug flag = N
+[0-8] The headless flag = N
+[0-8] The debug flag = N
+[0-8] RUNNING in chrome - /test/features/demo/WorldFeature.feature
+[0-8] World Before Scenario >>> {"gherkinDocument":{"feature":{"tags":[],"location":{"line":1,"column":1},"language":"en","keyword":"Feature","name":"World Feature","description":"Passing variables to different step definitions","children":[{"scenario":{"id":"4","tags":[{"location":{"line":4,"column":5},"name":"@demo","id":"2"},{"location":{"line":4,"column":11},"name":"@smoke","id":"3"}],"location":{"line":5,"column":5},"keyword":"Scenario","name":"World Feature Demo","description":"","steps":[{"id":"0","location":{"line":6,"column":5},"keyword":"Given ","keywordType":"Context","text":"I log into CNBC page"},{"id":"1","location":{"line":7,"column":5},"keyword":"Then ","keywordType":"Outcome","text":"check AAPL stock price"}],"examples":[]}}]},"comments":[],"uri":"/Users/shaunvalentine/Documents/Code/Udemy/WebdriverIO/WDIO-Cucumber-E2E/test/features/demo/WorldFeature.feature"},"pickle":{"id":"7","uri":"/Users/shaunvalentine/Documents/Code/Udemy/WebdriverIO/WDIO-Cucumber-E2E/test/features/demo/WorldFeature.feature","astNodeIds":["4"],"tags":[{"name":"@demo","astNodeId":"2"},{"name":"@smoke","astNodeId":"3"}],"name":"World Feature Demo","language":"en","steps":[{"id":"5","text":"I log into CNBC page","type":"Context","astNodeIds":["0"],"keyword":"Given "},{"id":"6","text":"check AAPL stock price","type":"Outcome","astNodeIds":["1"],"keyword":"Then "}]},"testCaseStartedId":"61"}
+[0-8] Context Before Scenario >>> {"appid":"","testNo":1}
+[0-8] [[32mINFO[39m]: Logging into CNBC...
+[0-8] Step: >>> {"id":"5","text":"I log into CNBC page","type":"Context","astNodeIds":["0"],"keyword":"Given "}
+[0-8] Scenario: >>> {"id":"0","uri":"/Users/shaunvalentine/Documents/Code/Udemy/WebdriverIO/WDIO-Cucumber-E2E/test/features/demo/WorldFeature.feature","astNodeIds":["4"],"tags":[{"name":"@demo","astNodeId":"2"},{"name":"@smoke","astNodeId":"3"}],"name":"World Feature Demo","language":"en","steps":[{"id":"5","text":"I log into CNBC page","type":"Context","astNodeIds":["0"],"keyword":"Given "},{"id":"6","text":"check AAPL stock price","type":"Outcome","astNodeIds":["1"],"keyword":"Then "}]}
+[0-8] Result: >>> {"passed":true,"duration":83.402958}
+[0-8] Context: >>> {"appid":"appIDTEST to pass to other step-definitions","testNo":23,"wdioRetries":0}
+[0-8] APP ID >>> SEE IT HERE >>> appIDTEST to pass to other step-definitions
+[0-8] TEST NO >>> SEE IT HERE >>> 23
+[0-8] Step: >>> {"id":"6","text":"check AAPL stock price","type":"Outcome","astNodeIds":["1"],"keyword":"Then "}
+[0-8] Scenario: >>> {"id":"0","uri":"/Users/shaunvalentine/Documents/Code/Udemy/WebdriverIO/WDIO-Cucumber-E2E/test/features/demo/WorldFeature.feature","astNodeIds":["4"],"tags":[{"name":"@demo","astNodeId":"2"},{"name":"@smoke","astNodeId":"3"}],"name":"World Feature Demo","language":"en","steps":[{"id":"5","text":"I log into CNBC page","type":"Context","astNodeIds":["0"],"keyword":"Given "},{"id":"6","text":"check AAPL stock price","type":"Outcome","astNodeIds":["1"],"keyword":"Then "}]}
+[0-8] Result: >>> {"passed":true,"duration":630.524657}
+[0-8] Context: >>> {"appid":"appIDTEST to pass to other step-definitions","testNo":23,"wdioRetries":0}
+[0-8] PASSED in chrome - /test/features/demo/WorldFeature.feature
+
+ "spec" Reporter:
+------------------------------------------------------------------
+[chrome 105.0.5195.102 mac os x #0-8] Running: chrome (v105.0.5195.102) on mac os x
+[chrome 105.0.5195.102 mac os x #0-8] Session ID: e64e3b7505f67062bf9bae76febed2e4
+[chrome 105.0.5195.102 mac os x #0-8]
+[chrome 105.0.5195.102 mac os x #0-8] » /test/features/demo/WorldFeature.feature
+[chrome 105.0.5195.102 mac os x #0-8] World Feature
+[chrome 105.0.5195.102 mac os x #0-8] [90mPassing variables to different step definitions[39m
+[chrome 105.0.5195.102 mac os x #0-8]
+[chrome 105.0.5195.102 mac os x #0-8] World Feature Demo
+[chrome 105.0.5195.102 mac os x #0-8]    [32m✓[39m Given I log into CNBC page
+[chrome 105.0.5195.102 mac os x #0-8]    [32m✓[39m Then check AAPL stock price
+[chrome 105.0.5195.102 mac os x #0-8]
+[chrome 105.0.5195.102 mac os x #0-8] [32m2 passing (7s)[39m
+
+
+Spec Files:	 1 passed, 8 skipped, 9 total (100% completed) in 00:00:10 
+

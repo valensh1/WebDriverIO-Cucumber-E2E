@@ -1,9 +1,9 @@
 <?xml version='1.0'?>
-<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1662868381282' stop='1662868387933'>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1662882906679' stop='1662882913028'>
     <name>World Feature</name>
     <title>World Feature</title>
     <test-cases>
-        <test-case start='1662868381291' status='passed' stop='1662868387932'>
+        <test-case start='1662882906688' status='passed' stop='1662882913028'>
             <name>World Feature Demo</name>
             <title>World Feature Demo</title>
             <labels>
@@ -16,13 +16,26 @@
                 <parameter kind='environment-variable' name='Environment:' value='TEST'/>
             </parameters>
             <steps>
-                <step start='1662868381293' status='passed' stop='1662868382382'>
+                <step start='1662882906691' status='passed' stop='1662882907501'>
                     <name>Given I log into CNBC page</name>
                     <title>Given I log into CNBC page</title>
                     <attachments/>
-                    <steps/>
+                    <steps>
+                        <step start='1662882906694' status='passed' stop='1662882906694'>
+                            <name>Login to CNBC</name>
+                            <title>Login to CNBC</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1662882907500' status='passed' stop='1662882907500'>
+                            <name>Login to CNBC was SUCCESSFUL!!!!</name>
+                            <title>Login to CNBC was SUCCESSFUL!!!!</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
                 </step>
-                <step start='1662868382382' status='passed' stop='1662868387931'>
+                <step start='1662882907501' status='passed' stop='1662882913027'>
                     <name>Then check AAPL stock price</name>
                     <title>Then check AAPL stock price</title>
                     <attachments/>
