@@ -70,4 +70,5 @@ Given(/^I log into CNBC page$/, async function () {
   this.appid = 'appIDTEST to pass to other step-definitions';
   this.testNo = 23;
   reporter.addStep(this.testNo, 'debug', 'Login to CNBC was SUCCESSFUL!!!!');
-})
+});
+

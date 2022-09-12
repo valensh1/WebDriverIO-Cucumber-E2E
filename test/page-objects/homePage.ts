@@ -42,11 +42,7 @@ class HomePage extends Page {
     try {
       password = password.trim();
       await this.typeInto(await this.passwordInputBox, password);
-      reporter.addStep(
-        testid,
-        'info',
-        `password entered successfully `
-      );
+      reporter.addStep(testid, 'info', `password entered successfully `);
     } catch (err) {
       err.message = `Error entering password, ${err.message}`;
       throw err;
@@ -55,12 +51,8 @@ class HomePage extends Page {
 
   async clickLoginBtn(testid: string) {
     try {
-      await this.click(await this.loginBtn)
-      reporter.addStep(
-        testid,
-        'info',
-        `Login button clicked `
-      );
+      await this.click(await this.loginBtn);
+      reporter.addStep(testid, 'info', `Login button clicked `);
     } catch (err) {
       err.message = `Error clicking login button, ${err.message}`;
       throw err;
@@ -69,13 +61,12 @@ class HomePage extends Page {
 
   async loginToSauseApp(testid: string, userName: string, password: string) {
     try {
-        await this.enterUserName(testid, userName);
-        await this.enterPassword(testid, password);
-        await this.clickLoginBtn(testid);
+      await this.enterUserName(testid, userName);
+      await this.enterPassword(testid, password);
+      await this.clickLoginBtn(testid);
     } catch (err) {
-        throw err
+      throw err;
     }
   }
-
 }
 export default new HomePage();
